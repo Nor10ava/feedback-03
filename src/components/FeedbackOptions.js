@@ -1,5 +1,6 @@
 import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import PropTypes from "prop-types";
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
@@ -19,3 +20,7 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
 };
 
 export default FeedbackOptions;
+FeedbackOptions.propTypes = {
+  onLeaveFeedback: PropTypes.func,
+  options: PropTypes.array,
+};
